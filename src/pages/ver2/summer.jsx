@@ -45,7 +45,7 @@ const Colorlog = () => {
   const [mediaUrls, setMediaUrls] = useState({ imagePath: "", videoPath: "" });
 
   useEffect(() => {
-    axios.get(`http://35.216.11.182:8080/api/api/user/get_result`, {
+    axios.get(`http://localhost:8080/api/api/user/get_result`, {
         params: { userId }
     })
         .then(response => {
@@ -59,7 +59,7 @@ const Colorlog = () => {
 useEffect(() => {
     async function fetchData() {
         try {
-            const response = await axios.get('http://35.216.11.182:8080/api/api/photogroup/get_photogroup', {
+            const response = await axios.get('http://localhost:8080/api/api/photogroup/get_photogroup', {
                 params: { userId }
             });
             setMediaUrls(response.data);

@@ -173,7 +173,7 @@ function downloadFile(url, extension) {
         </BestColor>
 
         <Celebrities>
-          <p>봄 원톤의 대표적인 연예인으로는</p>
+          <p>봄 웜톤의 대표적인 연예인으로는</p>
           <p>
             {" "}
             <strong>아이유</strong>님, <strong>수지</strong>님,{" "}

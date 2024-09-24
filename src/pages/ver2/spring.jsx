@@ -45,7 +45,7 @@ const Colorlog = () => {
   const [mediaUrls, setMediaUrls] = useState({ imagePath: "", videoPath: "" });
 
   useEffect(() => {
-    axios.get(`https://colorlogs.site/api/api/user/get_result`, {
+    axios.get(`https://colorlogs.site/api/user/get_result`, {
         params: { userId }
     })
         .then(response => {
@@ -59,7 +59,7 @@ const Colorlog = () => {
 useEffect(() => {
     async function fetchData() {
         try {
-            const response = await axios.get('https://colorlogs.site/api/api/photogroup/get_photogroup', {
+            const response = await axios.get('https://colorlogs.site/api/photogroup/get_photogroup', {
                 params: { userId }
             });
             setMediaUrls(response.data);

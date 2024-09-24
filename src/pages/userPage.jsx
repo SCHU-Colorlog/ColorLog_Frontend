@@ -16,7 +16,7 @@ const UserPage = () => {
 
   useEffect(() => {
     axios
-      .get("https://colorlogs.site/api/api/user/get_result", {
+      .get("https://colorlogs.site/api/user/get_result", {
         params: { userId },
       })
       .then((response) => {

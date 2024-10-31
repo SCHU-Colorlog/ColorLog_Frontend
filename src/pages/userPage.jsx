@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import {
+  ErrorMessage,
+} from "./style";
 
 // 각 계절 컴포넌트를 임포트합니다.
 import Summer from "./ver2/summer"; 
@@ -37,7 +40,12 @@ const UserPage = () => {
 
   // 에러 발생 시
   if (error) {
-    return <div>There was an error loading the user data.</div>;
+    return (
+      <ErrorMessage>
+      현재는 서버가 닫혀있습니다. 죄송합니다.
+      😓
+      </ErrorMessage>
+      );
   }
 
   // 각 컬러 톤 결과에 따라 컴포넌트 렌더링

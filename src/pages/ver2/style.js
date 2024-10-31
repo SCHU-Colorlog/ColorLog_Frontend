@@ -88,6 +88,16 @@ export const ProfileImage = styled.img`
   margin-top: 20px;
 `;
 
+export const ErrorMessage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 2rem;
+  color: #555;
+  text-align: center;
+`;
+
 // Options section
 export const Options = styled.ul`
   display: flex;
@@ -98,6 +108,8 @@ export const Options = styled.ul`
   background-color: ${({ $backgroundColor }) => $backgroundColor};
   margin: 16px 0 0 0;
   `;
+
+
 
 export const OptionItem = styled.li`
   position: relative;

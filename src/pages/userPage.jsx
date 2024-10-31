@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import {
   ErrorMessage,
-} from "./style";
+} from "./ver2/style";
 
 // 각 계절 컴포넌트를 임포트합니다.
 import Summer from "./ver2/summer"; 
@@ -42,7 +42,9 @@ const UserPage = () => {
   if (error) {
     return (
       <ErrorMessage>
-      현재는 서버가 닫혀있습니다. 죄송합니다.
+      안녕하세요. 순천향대학교 사물인터넷학과 
+      캡스톤 디자인 날아오르라 졸작이여 팀의 colorlog 입니다.
+      현재는 서버가 닫혀있어서 웹페이지 이용이 어렵습니다. 죄송합니다.
       😓
       </ErrorMessage>
       );

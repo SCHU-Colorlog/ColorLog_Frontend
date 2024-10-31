@@ -3,6 +3,10 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import {
   ErrorMessage,
+  AppContainer,
+  ColorlogContainer,
+  Header,
+  GlobalStyle
 } from "./ver2/style";
 
 // 각 계절 컴포넌트를 임포트합니다.
@@ -35,18 +39,48 @@ const UserPage = () => {
 
   // 로딩 중일 때
   if (loading) {
-    return <div>Loading user data...</div>;
+
+    return (
+    <AppContainer>
+      <ColorlogContainer>
+        <Header>
+          <GlobalStyle />
+          <h1>colorlog</h1>
+          </Header>
+            <ErrorMessage>
+              <h2>
+                Loading user data...
+              </h2>
+            </ErrorMessage>
+        </ColorlogContainer>
+      </AppContainer>
+            );
   }
 
   // 에러 발생 시
   if (error) {
     return (
-      <ErrorMessage>
-      안녕하세요. 순천향대학교 사물인터넷학과 
-      캡스톤 디자인 날아오르라 졸작이여 팀의 colorlog 입니다.
-      현재는 서버가 닫혀있어서 웹페이지 이용이 어렵습니다. 죄송합니다.
-      😓
+      <AppContainer>
+      <ColorlogContainer>
+        <Header>
+          <GlobalStyle />
+          <h1>colorlog</h1>
+          </Header>
+          <ErrorMessage>
+        
+          안녕하세요.<br /> 
+          순천향대학교 사물인터넷학과<br /> 
+          캡스톤 디자인 - 날아오르라 졸작이여 팀의 colorlog 입니다.<br /> 
+          <br />
+          <br />
+          현재는 서버가 닫혀있어서<br /> 
+          웹페이지 이용이 어렵습니다. <br />
+          죄송합니다.<br />
+          😓
+
       </ErrorMessage>
+      </ColorlogContainer>
+      </AppContainer>
       );
   }
 

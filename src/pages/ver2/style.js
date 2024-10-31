@@ -89,13 +89,16 @@ export const ProfileImage = styled.img`
 `;
 
 export const ErrorMessage = styled.div`
+  font-weight: 500;
+  font-family: 'Nanum Gothic'
+  font-size: 18px;
   display: flex;
+  text-align: center;
+  color: #000000;
+  padding: 10px;
+  margin: 30px;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  font-size: 2rem;
-  color: #555;
-  text-align: center;
 `;
 
 // Options section

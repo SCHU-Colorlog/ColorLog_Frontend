@@ -76,8 +76,13 @@ const handleClick1 = () => {
 };
 
 const handleClick2 = () => {
-    downloadFile(mediaUrls.videoPath, "mp4");
-    alert(`동영상이 다운로드됩니다.`);
+  const link = document.createElement('a');
+  link.href = mediaUrls.videoPath;
+  link.download = 'video.mp4'; // 다운로드될 파일명 설정
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  alert('동영상이 다운로드됩니다.');
 };
 
 

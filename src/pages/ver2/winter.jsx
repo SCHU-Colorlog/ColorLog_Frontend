@@ -150,8 +150,8 @@ function downloadFile(url, extension) {
               </a>
             </OptionItem>
             <OptionItem $video={Video} onClick={handleClick2}>
-              <a href={`/user/${userId}`}>
-                <span onClick={handleClick2}>동영상 저장</span>
+              <a href={mediaUrls.videoPath} download={`video_${userId}.mp4`}>
+                <span>동영상 저장</span>
               </a>
             </OptionItem>
           </Options>

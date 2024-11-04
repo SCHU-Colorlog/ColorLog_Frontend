@@ -20,8 +20,8 @@ export const AppContainer = styled.div`
   padding-bottom: env(safe-area-inset-bottom);
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
-  margin: 0;
-  height: 230vh;
+  margin-bottom: 20%;
+  height: 100%;
 `;
 
 // Main container
@@ -29,6 +29,8 @@ export const ColorlogContainer = styled.div`
   font-family: "Arial", sans-serif;
   text-align: center;
   color: #333;
+  margin-bottom: 20%;
+  height: 100%;
 `;
 
 // Header styling
@@ -38,9 +40,9 @@ export const Header = styled.header`
   padding-top: 0;
 
   h1 {
-    font-size: 30px;;
+    font-size: 30px;
     font-weight: normal;
-    font-family: 'SF_HambakSnow';
+    font-family: "SF_HambakSnow";
     padding: 20px 0 10px 0;
     margin: 0 auto 0 auto;
     width: 50vw;
@@ -110,9 +112,7 @@ export const Options = styled.ul`
   padding: 10px;
   background-color: ${({ $backgroundColor }) => $backgroundColor};
   margin: 16px 0 0 0;
-  `;
-
-
+`;
 
 export const OptionItem = styled.li`
   position: relative;
@@ -120,9 +120,10 @@ export const OptionItem = styled.li`
   width: 70px; /* 너비는 필요에 맞게 조정 */
 
   a {
-    display: block;
+    display: inline-block;
     text-decoration: none;
     color: #333; /* 텍스트 색상 */
+    align-items: center;
   }
 
   a:before {
@@ -145,10 +146,13 @@ export const OptionItem = styled.li`
   }
 
   span {
-    display: block;
+    display: inline-block;
     color: #ffffff;
     font-size: 14px;
     margin-top: 10px;
+    padding: 0 5px;
+    text-align: center;
+    white-space: nowrap;
   }
 `;
 
@@ -185,7 +189,6 @@ export const ColorCircles = styled.div`
   justify-content: center;
   gap: 5px;
   margin-top: 10px;
-  
 `;
 
 export const LineBelowCircles = styled.div`
@@ -236,7 +239,7 @@ export const CosmeticsList = styled.section`
     position: relative;
     font-size: 27px;
     font-weight: normal;
-    font-family: 'SF_HambakSnow';
+    font-family: "SF_HambakSnow";
     padding-bottom: 10px;
     margin-bottom: 20px;
     &::after {
@@ -285,12 +288,40 @@ export const ProductImage = styled.img`
   width: 80px;
   height: 80px;
   object-fit: contain;
-  @media screen and (max-width: 390px) {
+
+  @media screen and (min-width: 320px) and (max-width: 361px) {
     margin: 10px 10px 0 10px;
+    padding: 0;
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+  }
+
+  @media screen and (min-width: 362px) and (max-width: 376px) {
+    margin: 10px 10px 0 15px;
+    padding: 0;
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+  }
+
+  @media screen and (min-width: 377px) and (max-width: 391px) {
+    margin: 10px 10px 0 15px;
     padding: 0;
     width: 80px;
     height: 80px;
     object-fit: contain;
+  }
+
+  @media screen and (min-width: 392px) and (max-width: 426px) {
+    margin: 10px 10px 0 15px;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+
+  @media screen and (min-width: 427px) and (max-width: 720px) and (orientation: portrait) {
   }
 `;
 
@@ -301,6 +332,27 @@ export const ProductInfo = styled.div`
   justify-content: space-between;
   text-align: left;
   flex: 1;
+  @media screen and (min-width: 320px) and (max-width: 345px) {
+    font-size: 12px;
+  }
+  @media screen and (min-width: 346px) and (max-width: 361px) {
+    font-size: 13px;
+  }
+
+  @media screen and (min-width: 362px) and (max-width: 376px) {
+    font-size: 13px;
+  }
+
+  @media screen and (min-width: 377px) and (max-width: 391px) {
+    font-size: 13px;
+  }
+
+  @media screen and (min-width: 392px) and (max-width: 426px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 427px) and (max-width: 720px) and (orientation: portrait) {
+  }
 `;
 
 export const BrandAndName = styled.div`
@@ -308,8 +360,26 @@ export const BrandAndName = styled.div`
   align-items: center; /* brand와 name을 같은 줄에 정렬 */
   gap: 8px; /* brand와 name 사이에 간격 추가 */
   padding-bottom: 10px;
-  @media screen and (max-width: 390px) {
+  @media screen and (min-width: 320px) and (max-width: 345px) {
+    font-size: 12px;
+  }
+  @media screen and (min-width: 346px) and (max-width: 361px) {
+    font-size: 13px;
+  }
+
+  @media screen and (min-width: 362px) and (max-width: 376px) {
+    font-size: 13px;
+  }
+
+  @media screen and (min-width: 377px) and (max-width: 391px) {
+    font-size: 13px;
+  }
+
+  @media screen and (min-width: 392px) and (max-width: 426px) {
     font-size: 14px;
+  }
+
+  @media screen and (min-width: 427px) and (max-width: 720px) and (orientation: portrait) {
   }
 `;
 
@@ -317,7 +387,7 @@ export const BrandAndName = styled.div`
 export const Brand = styled.span`
   font-weight: nomal;
   font-size: 1rem;
-  font-family: 'SF_HambakSnow';
+  font-family: "SF_HambakSnow";
   color: #333;
 `;
 

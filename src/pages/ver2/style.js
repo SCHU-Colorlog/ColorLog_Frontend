@@ -112,6 +112,9 @@ export const Options = styled.ul`
   padding: 10px;
   background-color: ${({ $backgroundColor }) => $backgroundColor};
   margin: 16px 0 0 0;
+  @media screen and (max-width: 345px) {
+    height: 70px;
+  }
 `;
 
 export const OptionItem = styled.li`
